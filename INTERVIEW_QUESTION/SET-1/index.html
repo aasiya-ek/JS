@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <!-- DAY1
+1.Difference between “ == “ and “ === “ operators.
+2.What are the differences between var, let and const?
+3.What is execution context
+4.What is creation phase and execution phase.
+5.What is hoisting?
+6.Difference between undefined vs not defined vs NaN
+7.How many operators do we have in JS ? 
+8.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript -->
+    <h1>1.Difference between "==" and "===" operators.</h1>
+    <p>The "==" operator is used for comparison between two variables, but it does not check for data type. It performs type coercion if the variables are of different types. For example, if we compare a string and a number using "==", JavaScript will convert the string to a number before making the comparison.</p>
+    <p>On the other hand, the "===" operator is used for strict comparison. It checks for both value and data type, and does not perform type coercion. If the variables being compared are of different types, the "===" operator will return false.</p>
+    <h1>2.What are the differences between var, let and const?</h1>
+    <p>var: It is function-scoped and can be redeclared and updated within its scope. Variables declared with var are hoisted to the top of their scope and initialized with undefined.</p>
+    <p>let: It is block-scoped and can be updated but not redeclared within its scope. Variables declared with let are hoisted to the top of their block scope but are not initialized, leading to a temporal dead zone until they are assigned a value.</p>
+    <p>const: It is also block-scoped and cannot be updated or redeclared within its scope. Variables declared with const must be initialized at the time of declaration. Like let, const variables are hoisted but not initialized, resulting in a temporal dead zone.</p>
+    <h1>3.What is execution context?</h1>
+    <p>Execution context is the environment in which JavaScript code is executed. It contains information about the variables, functions, and objects that are accessible at a particular point in the code. There are two types of execution contexts: global and function. The global execution context is created when the JavaScript file is loaded, and a new function execution context is created whenever a function is called.</p>
+    <h1>4.What is creation phase and execution phase?</h1>
+    <p>The creation phase is the first phase of the execution context, where the JavaScript engine allocates memory for variables and functions. During this phase, variables are hoisted and initialized with undefined, while function declarations are hoisted and assigned their actual function definitions.</p>
+    <p>The execution phase is the second phase, where the JavaScript engine executes the code line by line. During this phase, the values of variables are assigned, and functions are executed.</p>
+    <h1>5.What is hoisting?</h1>
+    <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the creation phase. This means that you can use variables and call functions before they are declared in the code. However, only the declarations are hoisted, not the initializations. As a result, if you try to access a variable before it is initialized, you will get undefined.</p>
+    <h1>6.Difference between undefined vs not defined vs NaN</h1>
+    <p>undefined: It is a data type in JavaScript that indicates that a variable  has been declared but has not been assigned a value. For example, if you declare a variable without initializing it, its value will be undefined.</p>
+    <p>not defined: It refers to a variable that has not been declared in the current scope. If you try to access a variable that is not defined, JavaScript will throw a ReferenceError.</p>
+    <p>NaN: It stands for "Not-a-Number" and is a special numeric value that indicates an invalid or undefined mathematical operation. For example, dividing zero by zero or trying to convert a non-numeric string to a number will result in NaN.</p>
+    <h1>7.How many operators do we have in JS?</h1>
+    <p>JavaScript has several types of operators, including:</p>
+    <ul>
+      <li>Arithmetic Operators (+, -, *, /, %, ++, --)</li>
+      <li>Assignment Operators (=, +=, -=, *=, /=, %=)</li>
+      <li>Comparison Operators (==, ===, !=, !==, >, <, >=, <=)</li>
+      <li>Logical Operators (&&, ||, !)</li>
+      <li>Bitwise Operators (&, |, ^, ~, <<, >>, >>>)</li>
+      <li>String Operators (+ for concatenation)</li>
+      <li>Ternary Operator (condition ? expr1 : expr2)</li>
+      <li>Type Operators (typeof, instanceof)</li> 
+    </ul>
+    <h1>8.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript</h1>
+    <p>Local Scope: Variables declared within a function are in the local scope and can only be accessed within that function.</p>
+    <p>Block Scope: Variables declared with let or const within a block (e.g  , inside curly braces {}) are in the block scope and can only be accessed within that block.</p>
+    <p>Functional Scope: Variables declared with var within a function are in the functional scope and can be accessed anywhere within that function, regardless of block boundaries.</p>
+    <p>Scope Chain: The scope chain is the hierarchy of scopes that determines the accessibility  of variables. When a variable is accessed, JavaScript first looks in the local scope, then in the outer scopes, and finally in the global scope if it is not found in any of the inner scopes.</p>  
+
+  </body>
+</html>
